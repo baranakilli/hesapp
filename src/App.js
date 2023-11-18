@@ -3,7 +3,6 @@ import './App.css';
 import NumberInput from './NumberInput';
 
 function App() {
-
   const [satis, setSatis] = useState(0);
   const [indirim, setIndirim] = useState(0);
   const [sonuc, setSonuc] = useState(0);
@@ -20,7 +19,7 @@ function App() {
   };
 
   const onSonucSubmit = () => {
-    setSonuc((satis - (satis * indirim / 100)).toFixed(3));
+    setSonuc((satis - (satis * indirim) / 100).toFixed(3));
   };
 
   const onKomisyonChange = (event) => {
@@ -28,20 +27,24 @@ function App() {
   };
 
   const onKeyPressedForSonuc = (keyInfo) => {
-  if(keyInfo.keyCode === 13) onSonucSubmit();
-}
+    if (keyInfo.keyCode === 13) onSonucSubmit();
+  };
+
+  const onKeyPressedForFinalSonuc = (keyInfo) => {
+    if (keyInfo.keyCode === 13) onFinalSonucSubmit();
+  };
 
   const onKargoChange = (event) => {
     setKargo(event.target.value);
   };
 
   const onFinalSonucSubmit = () => {
-    setFinalSonuc((sonuc - (sonuc * komisyon / 100) - kargo).toFixed(3));
+    setFinalSonuc((sonuc - (sonuc * komisyon) / 100 - kargo).toFixed(3));
   };
 
   return (
     <div className="App">
-      <div id='container'>
+      <div id="container">
         <NumberInput
           inputText={'Satış Fiyatı'}
           inputId={'satis'}
@@ -65,6 +68,7 @@ function App() {
           inputText={'Kargo Ücreti'}
           inputId={'kargo'}
           inputChange={onKargoChange}
+          onKeyPressed={onKeyPressedForFinalSonuc}
         />
         <button onClick={onFinalSonucSubmit}>Onayla</button>
         <h1>FİNAL SONUÇ : {finalSonuc}</h1>
