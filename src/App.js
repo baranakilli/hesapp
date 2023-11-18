@@ -49,6 +49,7 @@ function App() {
           inputText={'Satış Fiyatı'}
           inputId={'satis'}
           inputChange={onSatisChange}
+          onKeyPressed={onKeyPressedForSonuc}
         />
         <NumberInput
           inputText={'İndirim Miktarı %'}
@@ -63,6 +64,7 @@ function App() {
           inputText={'Komisyon Miktarı %'}
           inputId={'komisyon'}
           inputChange={onKomisyonChange}
+          onKeyPressed={onKeyPressedForFinalSonuc}
         />
         <NumberInput
           inputText={'Kargo Ücreti'}
