@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/hesapp/static/css/main.858d4d12.css",
-    "main.js": "/hesapp/static/js/main.9924942c.js",
+    "main.js": "/hesapp/static/js/main.5491bb2d.js",
     "static/js/787.8235aad6.chunk.js": "/hesapp/static/js/787.8235aad6.chunk.js",
     "index.html": "/hesapp/index.html",
     "main.858d4d12.css.map": "/hesapp/static/css/main.858d4d12.css.map",
-    "main.9924942c.js.map": "/hesapp/static/js/main.9924942c.js.map",
+    "main.5491bb2d.js.map": "/hesapp/static/js/main.5491bb2d.js.map",
     "787.8235aad6.chunk.js.map": "/hesapp/static/js/787.8235aad6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.858d4d12.css",
-    "static/js/main.9924942c.js"
+    "static/js/main.5491bb2d.js"
   ]
 }
